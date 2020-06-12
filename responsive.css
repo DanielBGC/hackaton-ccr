@@ -1,0 +1,38 @@
+@media(max-width: 500px) {
+   
+    fieldset {
+        max-width: 3vw;
+    }
+
+    fieldset legend {
+        font-size: 24pt;
+        text-align: center;
+    }
+   
+    .details {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 30px;
+        margin-top: 50px;
+        margin-left: 30%;
+    }
+
+    .details div {
+        max-width: 250px;
+    }
+    
+    .details img {
+        width: 48px;
+        height: 48px;
+        text-align: center;
+        margin-left: 43%;
+    }
+    
+    .details textarea {
+        resize: none;
+        margin: 10px 20px;
+        font-size: 16pt;
+        width: 210px;
+        height: 150px;
+    }
+}

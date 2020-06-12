@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte Caminhoneiro</title>
+    <link rel="shortcut icon" href="assets/logo.svg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Localização</legend>
+            
+            <div class="local">
+                <div>
+                    <label><input type="radio" name="place" id="outside" checked>Fora da cidade</label>
+                </div>
+                <div>
+                    <label><input type="radio" name="place" id="inside">Dentro da cidade</label>
+                </div>
+            </div>
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="uf">Estado</label>
+                    <select name="uf" id="" required="required">
+                        <option value="">Selecione o estado</option>
+                    </select>
+
+                    <input type="hidden" name="state">
+                </div>
+
+                <div class="field">
+                    <label for="city">Cidade</label>
+                    <select name="city" id="" disabled="disabled" required="required">
+                        <option value="">Selecione a cidade</option>
+                    </select>
+                </div>
+            </div>   
+
+            <div class="field-group">
+                <div class="field">
+                    <label for="posto">Nome do posto/Ponto de parada</label>
+                    <input type="text" name="posto" id="">
+                </div>
+
+                <div class="field">
+                    <label for="km">Km da estrada</label>
+                    <input type="number" name="km" id="" min=0 required="required">
+                </div>
+            </div>    
+        </fieldset>
+
+        <fieldset class="problems">
+            <legend>Reclamação rápida</legend>
+            <h2>Selecione 1 ou mais items:  </h2>
+            <div class="problems-grid">
+                <li data-id="1">
+                    <h3>Estrada ruim</h3>
+                    <img src="assets/road.svg" alt="">
+                </li>
+                <li data-id="2">
+                    <h3>Ineficiência do guincho na estrada</h3>
+                    <img src="assets/winch.svg" alt="">
+                </li>
+                <li data-id="3">
+                    <h3>Dificuldade no carregamento/descarregamento</h3>
+                    <img src="assets/hoist.svg" alt="">
+                </li>
+                <li data-id="4">
+                    <h3>Lugar pouco iluminado</h3>
+                    <img src="assets/lamp.svg" alt="">
+                </li>
+                <li data-id="5">
+                    <h3>Falta de segurança</h3>
+                    <img src="assets/security.svg" alt="">
+                </li>
+                <li data-id="6">
+                    <h3>Falta de higienização</h3>
+                    <img src="assets/clean.svg" alt="">
+                </li>
+                <li data-id="7">
+                    <h3>Falta de comida de qualidade</h3>
+                    <img src="assets/restaurant.svg" alt="">
+                </li>
+            </div>
+            <input type="hidden" name="problems" id="problems">
+
+            <button type="submit" id="first" onclick="registerSucceed()"> Enviar </button>
+        </fieldset>
+
+        <fieldset>
+            <legend>Explique brevemente (opcional)</legend>   
+            <div class="details">
+                <div>
+                    <h3>Estrada ruim</h3>
+                    <img src="assets/road.svg" alt="">
+                    <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+                </div>
+                <div>
+                    <h3>Ineficiência do guincho na estrada</h3>
+                    <img src="assets/winch.svg" alt="">
+                    <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+                </div>
+                <div>
+                    <h3>Dificuldade no carregamento/descarregamento</h3>
+                    <img src="assets/hoist.svg" alt="">
+                    <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+                </div>
+                <div>
+                    <h3>Lugar pouco iluminado</h3>
+                    <img src="assets/lamp.svg" alt="">
+                    <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+                </div>
+                <div>
+                    <h3>Falta de segurança</h3>
+                    <img src="assets/security.svg" alt="">
+                    <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+                </div>
+                <div>
+                    <h3>Falta de higienização</h3>
+                    <img src="assets/clean.svg" alt="">
+                    <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+                </div>
+                <div>
+                    <h3>Falta de comida de qualidade</h3>
+                    <img src="assets/restaurant.svg" alt="">
+                    <textarea name="" id="" cols="30" rows="10" disabled></textarea>
+                </div>
+            </div>
+
+            <button type="submit" id="second" onclick="registerSucceed()"> Enviar </button>
+            
+        </fieldset>
+    </form>
+
+    <!-- 
+        Modal de feedback
+    -->
+    <div id="modal" class="point hide">
+        <div class="content">
+            <img src="assets/check.svg" alt="Feedback enviado">
+            <h1>Feedback enviado!</h1>
+        </div>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
