@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+li {
+    list-style-type: none;
+}
+
 .local {
     display: flex;
     flex-direction: column;
@@ -99,8 +103,7 @@ form fieldset.problems {
     margin: 50px auto;
 }
 
-.problems-grid li {
-    list-style-type: none;
+.problems-grid ul li {
     background-color: #f0f0f5;
     border-radius: 10px;
     text-align: center;
@@ -177,7 +180,7 @@ button {
 
 button#first {
     transition: 300ms;
-    margin-left: 120px;
+    margin-left: 160px;
     align-self: flex-start;
 }
 
@@ -233,4 +236,22 @@ button:hover {
 #modal.point .content h1 {
     color: white;
     margin-top: 30px;
+}
+
+footer {
+    height: auto;
+    margin-top: 150vh;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+}
+
+footer ul li {
+    margin: 10px 15px;
+}
+
+footer ul li:hover {
+    cursor: pointer;
 }
