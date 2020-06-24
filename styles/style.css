@@ -91,7 +91,7 @@ form fieldset.problems {
     height: auto;
 }
 
-.problems-grid {
+.problems-grid ul {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr ;
     gap: 40px;
