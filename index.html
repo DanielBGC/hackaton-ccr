@@ -155,16 +155,12 @@
         </fieldset>
     </form>
 
-    <!-- Modal de feedback -->
-    <div id="modal" class="point hide">
-        <div class="content">
-            <img src="assets/check.svg" alt="Feedback enviado">
-            <h1>Feedback enviado!</h1>
-        </div>
-    </div>
 
     <!-- Redes sociais para contato -->
     <footer>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120161.4359456392!2d-48.01957395888409!3d-19.753248014994025!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bad03162627637%3A0x8e83d9edb0f8e15c!2sUberaba%2C%20MG!5e0!3m2!1spt-BR!2sbr!4v1593051357904!5m2!1spt-BR!2sbr" height="450" frameborder="1" style="border:1;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
         <ul class="redes-sociais">
             <li>
                 <a href="http://instagram.com" target="_blank">
@@ -182,13 +178,20 @@
                 </a>
             </li>
             <li>
-                <a href="" onclick="location.href='mailto:caminhoneiro@suporte.com'">
+                <a href="#" onclick="location.href='mailto:caminhoneiro@suporte.com'">
                     <img src="assets/email.png" alt="Email">
                 </a>
             </li>
         </ul>
     </footer>
     
+    <!-- Modal de feedback -->
+    <div id="modal" class="hide">
+        <div class="content">
+            <img src="assets/check.svg" alt="Feedback enviado">
+            <h1>Feedback enviado!</h1>
+        </div>
+    </div>
     <script src="scripts/main.js"></script>
 </body>
 </html>

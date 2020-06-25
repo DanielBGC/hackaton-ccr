@@ -1,14 +1,22 @@
 * {
+
+    /* Faz a medição de cada elemento a partir da borda */
     box-sizing: border-box;
 }
 
 li {
+    /* Elimina a bolinha de cada elemento <li> */
     list-style-type: none;
 }
 
 header {
     height: 100vh;
     display: flex;
+}
+
+/* linha vertical que separa a logo da introdução */
+header hr {
+    height: calc(100vh - 50px);
 }
 
 header .logo {
@@ -66,6 +74,7 @@ form .field-group {
     margin: 50px 0;
 }
 
+/* primeiro filho de cada field-group */
 form .field-group .field:first-child {
     margin-right: 5em;
 }
@@ -89,6 +98,7 @@ form .field-group .field:first-child {
    /* outline: none; */
 }
 
+/* Elimina a setinha do select para os diversos tipos de navegadores */
 form select {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -121,7 +131,9 @@ form {
 }
 
 form fieldset {
+    /* elimina a borda padrão do fieldset */
     border: none;
+
     height: 100vh;
 }
 
@@ -130,9 +142,15 @@ form fieldset.problems {
 }
 
 .problems-grid ul {
+    /* organiza os elementos em grade */
     display: grid;
+
+    /* cada linha dessa grade recebe 3 colunas que se ajustam automaticamente */
     grid-template-columns: 1fr 1fr 1fr ;
+
+    /* espaço entre cada coluna e linha */
     gap: 40px;
+
     max-width: 80%;
     margin: 50px auto;
 }
@@ -146,10 +164,11 @@ form fieldset.problems {
 }
 
 .problems-grid li:hover {
+    /* muda o cursor do mouse pra identificar que o <li> é clicável */
     cursor: pointer;
 }
 
-
+/* A classe .selected será adicionada a cada elemento <li> através do javascript, quando clicada */
 .problems-grid li.selected {
     background: #e1faec;
     border: 2px solid #34cb79;
@@ -157,6 +176,8 @@ form fieldset.problems {
 
 .problems-grid li h3, img {
     text-align: center;
+
+    /* Aumenta a precisão da seleção de cada item */
     pointer-events: none;
 }
 
@@ -166,9 +187,15 @@ form fieldset.problems {
 }
 
 .details {
+    /* organiza os elementos em grade */
     display: grid;
+
+    /* cada linha dessa grade recebe 3 colunas que se ajustam automaticamente */
     grid-template-columns: 1fr 1fr 1fr;
+
+    /* espaço entre cada coluna e linha */
     gap: 40px;
+
     max-width: 60%;
     margin: 50px 20px;
 }
@@ -191,7 +218,9 @@ form fieldset.problems {
 }
 
 .details textarea {
+    /* impede o usuário de redimensionar o tamanho da caixa */
     resize: none;
+
     margin: 10px 20px;
     font-size: 16pt;
     width: 300px;
@@ -208,12 +237,20 @@ button {
     font-weight: 700;
 
     border-radius: 10px;
+
+    /* elimina a borda padrão do botão */
     border: 0;
+
+    /* Suaviza a transição pro evento hover */
     transition: 300ms;
 }
 
+button:hover {
+    /* a cor se torna levemente mais clara ao passar o mouse por cima de cada botão */
+    background-color: rgb(162, 221, 45);
+}
+
 button#first {
-    transition: 300ms;
     margin-left: 160px;
     align-self: flex-start;
 }
@@ -222,11 +259,50 @@ button#second {
     margin: 20px 30px;
 }
 
-button:hover {
-    background-color: rgb(162, 221, 45);
+footer {
+    height: auto;
+    width: 95vw;
+    margin-top: 150vh;
+
+    /* centraliza horizontalmente */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    /* transição das cores de fundo */
+    background: linear-gradient(black, red);
+}
+
+footer ul li {
+    margin: 10px 15px;
+
+    /* suaviza a transição pro evento transform */
+    transition: transform 200ms;
+}
+
+footer ul li:hover {
+    /* muda o cursor do mouse pra identificar que o elemento é clicável */
+    cursor: pointer;
+
+    /* Aumenta cada elemento de tamanho, ao passar o mouse por cima */
+    transform: scale(1.2);
+}
+
+.map {
+    text-align: center;
+}
+
+.map iframe {
+    width: 95vw;
 }
 
 /* Modal de register-succeed.html */
+/* Será exibido apenas quando o botão de enviar for clicado */
 #modal {
     background-color: rgba(14, 10, 20, 0.836);
     height: 100vh;
@@ -244,22 +320,23 @@ button:hover {
     transition: 400ms;
 }
 
+/* O modal inicia com a classe hide, mas é retirada através do javascript quando o botão enviar é clicado*/
 #modal.hide {
+    /* Não exibe o conteúdo na tela */
     display: none;
 }
 
 #modal .content {
     color: white;
-
     width: 420px;
 }
 
-#modal.point {
+#modal {
     width: 100%;
     height: 100%;
 }
 
-#modal.point .content {
+#modal .content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -267,25 +344,7 @@ button:hover {
     text-align: center;
 }
 
-#modal.point .content h1 {
+#modal .content h1 {
     color: white;
     margin-top: 30px;
-}
-
-footer {
-    height: auto;
-    margin-top: 150vh;
-}
-
-footer ul {
-    display: flex;
-    justify-content: center;
-}
-
-footer ul li {
-    margin: 10px 15px;
-}
-
-footer ul li:hover {
-    cursor: pointer;
 }
