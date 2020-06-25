@@ -11,13 +11,21 @@
 </head>
 <body>
     <header>
-        <h1></h1>
-        <p></p>
+        <div class="logo">
+            <h1>Suporte Caminhoneiro</h1>
+            <img src="assets/truck.svg" alt="">
+        </div>
+        <hr>
+        <div class="introducao">
+            <h2>O que é?</h2>
+            <p>Esse projeto foi desenvolvido durante o hackaton CCR, que ocorreu em parceria com a Shawee e o Grupo CCR. Período entre 09/06/2020 e 14/06/2020.</p>
+            <p>A proposta foi gerar ideias voltadas para a rotina dos caminhoneiros, encontrando soluções para melhorar a qualidade de vida nas estradas, principalmente quanto à saúde física e mental desses profissionais.</p>
+        </div>
     </header>
     <form>
         <fieldset>
             <legend>Localização</legend>
-            
+        
             <div class="local">
                 <div>
                     <label><input type="radio" name="place" id="outside" checked>Fora da cidade</label>
@@ -29,6 +37,7 @@
 
             <div class="field-group">
                 <div class="field">
+                    <!-- Através de uma API do IBGE, é possivel selecionar dinamicamente os Estados do Brasil e suas respectivas cidades -->
                     <label for="uf">Estado</label>
                     <select name="uf" id="" required="required">
                         <option value="">Selecione o estado</option>
@@ -39,6 +48,7 @@
 
                 <div class="field">
                     <label for="city">Cidade</label>
+                    <!-- Esse select só é habilitado quando o usuário escolher um Estado -->
                     <select name="city" id="" disabled="disabled" required="required">
                         <option value="">Selecione a cidade</option>
                     </select>
@@ -100,6 +110,8 @@
 
         <fieldset>
             <legend>Explique brevemente (opcional)</legend>   
+
+            <!-- Cada textarea só é habilitado se o seu correspondente no fieldset acima estiver selecionado -->
             <div class="details">
                 <div>
                     <h3>Estrada ruim</h3>
@@ -151,26 +163,27 @@
         </div>
     </div>
 
+    <!-- Redes sociais para contato -->
     <footer>
         <ul class="redes-sociais">
             <li>
                 <a href="http://instagram.com" target="_blank">
-                    <img src="assets/instagram.png" alt="">
+                    <img src="assets/instagram.png" alt="Instagram">
                 </a>
             </li>
             <li>
                 <a href="https://web.whatsapp.com/" target="_blank">
-                    <img src="assets/whatsapp.png" alt="">
+                    <img src="assets/whatsapp.png" alt="Whatsapp">
                 </a>
             </li>
             <li>
                 <a href="http://twitter.com" target="_blank">
-                    <img src="assets/twitter.png" alt="">
+                    <img src="assets/twitter.png" alt="Twitter">
                 </a>
             </li>
             <li>
                 <a href="" onclick="location.href='mailto:caminhoneiro@suporte.com'">
-                    <img src="assets/email.png" alt="">
+                    <img src="assets/email.png" alt="Email">
                 </a>
             </li>
         </ul>

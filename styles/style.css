@@ -6,6 +6,40 @@ li {
     list-style-type: none;
 }
 
+header {
+    height: 100vh;
+    display: flex;
+}
+
+header .logo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+}
+
+header .logo h1 {
+    font-size: 48pt;
+}
+
+header .logo img {
+    height: 256px;
+    width: 256px;
+}
+
+header .introducao {
+    max-width: 600px;
+    margin: 30px 50px;
+}
+
+header .introducao h2 {
+    font-size: 22pt;
+}
+
+header .introducao p {
+    text-align: justify;
+    font-size: 16pt;
+}
+
 .local {
     display: flex;
     flex-direction: column;
