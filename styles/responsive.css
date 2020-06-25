@@ -1,38 +1,348 @@
 @media(max-width: 500px) {
-   
-    fieldset {
-        max-width: 3vw;
+
+    header {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        max-width: 500px;
+    }
+
+    header a {
+        color: blue;
+    }
+
+    /* linha vertical que separa a logo da introdução */
+    header hr {
+        display: none;
+    }
+
+    header .logo {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-left: 10px;
+        height: 230px;
+    }
+
+    header .logo h1 {
+        font-size: 28pt;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-decoration: underline;
+    }
+
+    header .logo img {
+        height: 128px;
+        width: 128px;
+    }
+
+    header .introducao {
+        max-width: 500px;
+        margin: 30px 15px;
+    }
+
+    header .introducao h2 {
+        font-size: 18pt;
+    }
+
+    header .introducao p {
+        text-align: justify;
+        font-size: 12pt;
+    }
+
+    .local {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    max-width: 500px;
+    }
+
+    .local label, 
+    .local input {
+        font-size: 12pt;
+    }
+
+    form .field-group {
+        display: flex;
+        max-width: 500px;
+        width: 300px;
+    }
+
+    .field-group .field {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        margin: 20px 0;
+    }
+
+    .field label {
+        font-size: 13pt;
+        font-weight: 700;
+    }
+
+    .field input, 
+    .field select {
+        background-color: #f0f0f5;
+
+        width: 300px;
+        border: 0;
+        padding: 8px 12px;
+        font-size: 14pt;
+
+        border-radius: 10px;
+
+    /* outline: none; */
+    }
+
+    /* Elimina a setinha do select para os diversos tipos de navegadores */
+    form select {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    form label {
+        font-size: 14pt;
+        margin-bottom: 10px;
     }
 
     fieldset legend {
+        text-align: center;
         font-size: 24pt;
+        font-weight: 700;   
+        margin-bottom: 20px;
+    }
+
+    fieldset h2 {
+
+        font-size: 16pt;
+        font-weight: 700;
+
+        margin: 0;
         text-align: center;
     }
-   
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    form fieldset {
+        /* elimina a borda padrão do fieldset */
+        border: none;
+
+        height: auto;
+    }
+
+    form fieldset.problems {
+        height: auto;
+    }
+
+    form fieldset {
+        padding-right: 0;
+    }
+
+    .problems-grid ul {
+        /* organiza os elementos em grade */
+        display: grid;
+
+        /* cada linha dessa grade recebe 3 colunas que se ajustam automaticamente */
+        grid-template-columns: 1fr;
+
+        /* espaço entre cada coluna e linha */
+        gap: 20px;
+
+        max-width: 500px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .problems-grid ul li {
+        background-color: #f0f0f5;
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px 0;
+        width: 300px;
+        margin-left: 10px;
+    }
+
+    .problems-grid li:hover {
+        /* muda o cursor do mouse pra identificar que o <li> é clicável */
+        cursor: pointer;
+    }
+
+    /* A classe .selected será adicionada a cada elemento <li> através do javascript, quando clicada */
+    .problems-grid li.selected {
+        background: #e1faec;
+        border: 2px solid #34cb79;
+    }
+
+    .problems-grid li h3, img {
+        text-align: center;
+
+        /* Aumenta a precisão da seleção de cada item */
+        pointer-events: none;
+    }
+
+    .problems-grid li img {
+        width: 32px;
+        height: 32px;
+    }
+    
     .details {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 30px;
+        gap: 20px;
         margin-top: 50px;
-        margin-left: 30%;
     }
 
     .details div {
-        max-width: 250px;
+        max-width: 500px;
+        width: 300px;
     }
     
     .details img {
-        width: 48px;
-        height: 48px;
+        width: 32px;
+        height: 32px;
         text-align: center;
-        margin-left: 43%;
     }
     
     .details textarea {
         resize: none;
-        margin: 10px 20px;
-        font-size: 16pt;
-        width: 210px;
-        height: 150px;
+        margin: 10px 50px;
+        font-size: 12pt;
+        width: 190px;
+        height: 130px;
     }
+
+    .details h3 {
+        margin-bottom: 0;
+    }
+
+    button {
+        width: 240px;
+        height: 50px;
+
+        font-size: 20px;
+        background-color: rgb(131, 187, 18);
+        color: white;
+        font-weight: 700;
+
+        border-radius: 10px;
+
+        /* elimina a borda padrão do botão */
+        border: 0;
+
+        /* Suaviza a transição pro evento hover */
+        transition: 300ms;
+    }
+
+    button:hover {
+        /* a cor se torna levemente mais clara ao passar o mouse por cima de cada botão */
+        background-color: rgb(162, 221, 45);
+    }
+
+    button#first {
+        margin-top: 20px;
+        margin-left: 50px;
+        align-self: center;
+    }
+
+    button#second {
+        margin: 0 50px;
+    }
+
+    footer {
+        width: 300px;
+        max-width: 500px;
+
+        /* centraliza horizontalmente */
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+
+        /* transição das cores de fundo */
+        background: linear-gradient(black, red);
+    }
+
+    footer ul li {
+        margin: 10px 15px;
+
+        /* suaviza a transição pro evento transform */
+        transition: transform 200ms;
+    }
+
+    footer ul li:hover {
+        /* muda o cursor do mouse pra identificar que o elemento é clicável */
+        cursor: pointer;
+
+        /* Aumenta cada elemento de tamanho, ao passar o mouse por cima */
+        transform: scale(1.2);
+    }
+
+    .map {
+        text-align: center;
+    }
+
+    .map iframe {
+        width: 300px;
+        height: 300px;
+    }
+
+    /* Modal de register-succeed.html */
+    /* Será exibido apenas quando o botão de enviar for clicado */
+    #modal {
+        background-color: rgba(14, 10, 20, 0.836);
+        height: 100vh;
+        width: 100vw;
+
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        transition: 400ms;
+    }
+
+    /* O modal inicia com a classe hide, mas é retirada através do javascript quando o botão enviar é clicado*/
+    #modal.hide {
+        /* Não exibe o conteúdo na tela */
+        display: none;
+    }
+
+    #modal .content {
+        color: white;
+        width: 420px;
+    }
+
+    #modal {
+        width: 100%;
+        height: 100%;
+    }
+
+    #modal .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        text-align: center;
+    }
+
+    #modal .content h1 {
+        color: white;
+        margin-top: 30px;
+    }
+
 }
