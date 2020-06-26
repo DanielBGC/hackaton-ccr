@@ -101,13 +101,6 @@
     /* outline: none; */
     }
 
-    /* Elimina a setinha do select para os diversos tipos de navegadores */
-    form select {
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-    }
-
     form label {
         font-size: 14pt;
         margin-bottom: 10px;
@@ -121,7 +114,6 @@
     }
 
     fieldset h2 {
-
         font-size: 16pt;
         font-weight: 700;
 
@@ -129,20 +121,10 @@
         text-align: center;
     }
 
-    form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     form fieldset {
         /* elimina a borda padrão do fieldset */
         border: none;
 
-        height: auto;
-    }
-
-    form fieldset.problems {
         height: auto;
     }
 
@@ -176,24 +158,6 @@
         padding: 15px 0;
         width: 160px;
         height: auto;
-    }
-
-    .problems-grid li:hover {
-        /* muda o cursor do mouse pra identificar que o <li> é clicável */
-        cursor: pointer;
-    }
-
-    /* A classe .selected será adicionada a cada elemento <li> através do javascript, quando clicada */
-    .problems-grid li.selected {
-        background: #e1faec;
-        border: 2px solid #34cb79;
-    }
-
-    .problems-grid li h3, img {
-        text-align: center;
-
-        /* Aumenta a precisão da seleção de cada item */
-        pointer-events: none;
     }
 
     .problems-grid h3 {
@@ -254,11 +218,6 @@
         transition: 300ms;
     }
 
-    button:hover {
-        /* a cor se torna levemente mais clara ao passar o mouse por cima de cada botão */
-        background-color: rgb(162, 221, 45);
-    }
-
     button#first {
         margin-top: 20px;
         margin-left: 50px;
@@ -290,19 +249,6 @@
         padding-left: 0;
     }
 
-    footer ul li {
-        /* suaviza a transição pro evento transform */
-        transition: transform 200ms;
-    }
-
-    footer ul li:hover {
-        /* muda o cursor do mouse pra identificar que o elemento é clicável */
-        cursor: pointer;
-
-        /* Aumenta cada elemento de tamanho, ao passar o mouse por cima */
-        transform: scale(1.2);
-    }
-
     .map {
         text-align: center;
     }
@@ -311,53 +257,4 @@
         width: 300px;
         height: 300px;
     }
-
-    /* Modal de register-succeed.html */
-    /* Será exibido apenas quando o botão de enviar for clicado */
-    #modal {
-        background-color: rgba(14, 10, 20, 0.836);
-        height: 100vh;
-        width: 100vw;
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        transition: 400ms;
-    }
-
-    /* O modal inicia com a classe hide, mas é retirada através do javascript quando o botão enviar é clicado*/
-    #modal.hide {
-        /* Não exibe o conteúdo na tela */
-        display: none;
-    }
-
-    #modal .content {
-        color: white;
-        width: 420px;
-    }
-
-    #modal {
-        width: 100%;
-        height: 100%;
-    }
-
-    #modal .content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        text-align: center;
-    }
-
-    #modal .content h1 {
-        color: white;
-        margin-top: 30px;
-    }
-
 }
