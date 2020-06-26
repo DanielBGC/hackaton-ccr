@@ -1,5 +1,9 @@
 @media(max-width: 500px) {
 
+    body {
+        height: auto;
+    }
+
     header {
         height: auto;
         display: flex;
@@ -67,6 +71,7 @@
         display: flex;
         max-width: 500px;
         width: 300px;
+        flex-direction: column;
     }
 
     .field-group .field {
@@ -150,14 +155,18 @@
         display: grid;
 
         /* cada linha dessa grade recebe 3 colunas que se ajustam automaticamente */
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
 
         /* espaço entre cada coluna e linha */
-        gap: 20px;
+        gap: 10px;
 
         max-width: 500px;
         margin: 10px auto;
         padding-left: 0;
+    }
+
+    .problems-grid ul #responsive {
+        word-wrap: break-word;
     }
 
     .problems-grid ul li {
@@ -165,8 +174,8 @@
         border-radius: 10px;
         text-align: center;
         padding: 15px 0;
-        width: 300px;
-        margin-left: 10px;
+        width: 160px;
+        height: auto;
     }
 
     .problems-grid li:hover {
@@ -185,6 +194,11 @@
 
         /* Aumenta a precisão da seleção de cada item */
         pointer-events: none;
+    }
+
+    .problems-grid h3 {
+        font-size: 12pt;
+        height: auto;
     }
 
     .problems-grid li img {
@@ -213,7 +227,7 @@
     .details textarea {
         resize: none;
         margin: 10px 50px;
-        font-size: 12pt;
+        font-size: 10pt;
         width: 190px;
         height: 130px;
     }
@@ -259,23 +273,24 @@
         width: 300px;
         max-width: 500px;
 
-        /* centraliza horizontalmente */
+        margin-top: 50px;
+        height: 450px;
+
         margin-left: auto;
         margin-right: auto;
+        /* centraliza horizontalmente */
     }
 
     footer ul {
         display: flex;
         justify-content: center;
-        margin: 0;
 
         /* transição das cores de fundo */
         background: linear-gradient(black, red);
+        padding-left: 0;
     }
 
     footer ul li {
-        margin: 10px 15px;
-
         /* suaviza a transição pro evento transform */
         transition: transform 200ms;
     }
