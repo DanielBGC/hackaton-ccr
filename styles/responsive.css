@@ -1,5 +1,4 @@
-@media(max-width: 500px) {
-
+@media (min-width: 300px) and (max-width: 699px) {
     body {
         height: auto;
     }
@@ -258,3 +257,335 @@
         height: 300px;
     }
 }
+
+@media(min-width:700px) and (max-width: 1000px){
+    header {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+    }
+
+    /* linha vertical que separa a logo da introdução */
+    header hr {
+        display: none;
+    }
+
+    header .logo {
+        display: flex;
+        flex-direction: row;
+        margin-left: 10px;
+        height: auto;
+    }
+
+    header .logo h1 {
+        font-size: 28pt;
+        margin-top: 0;
+        margin-bottom: 0;
+        text-decoration: underline;
+        height: 50px;
+    }
+
+    header .logo img {
+        height: 128px;
+        width: 128px;
+
+        position: absolute;
+        top: 0;
+        right: 20vw;
+    }
+
+    header .introducao {
+        margin: 30px 15px;
+    }
+
+    header .introducao h2 {
+        font-size: 18pt;
+    }
+
+    header .introducao p {
+        text-align: justify;
+        font-size: 14pt;
+    }
+
+    .local {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    max-width: 500px;
+    }
+
+    .local label, 
+    .local input {
+        font-size: 12pt;
+    }
+
+    form .field-group {
+        display: flex;
+     
+        flex-direction: row;
+    }
+
+    .field-group .field {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+
+        margin: 20px 0;
+    }
+
+    /* primeiro filho de cada field-group */
+        form .field-group .field:first-child {
+    margin-right: 3em;
+}
+
+    .field label {
+        font-size: 15pt;
+        font-weight: 700;
+    }
+
+    .field input, 
+    .field select {
+        background-color: #f0f0f5;
+
+        width: 300px;
+        border: 0;
+        padding: 8px 12px;
+        font-size: 14pt;
+
+        border-radius: 10px;
+
+    /* outline: none; */
+    }
+
+    form label {
+        font-size: 14pt;
+        margin-bottom: 10px;
+    }
+
+    fieldset legend {
+        text-align: center;
+        font-size: 24pt;
+        font-weight: 700;   
+        margin-bottom: 20px;
+    }
+
+    fieldset h2 {
+        font-size: 16pt;
+        font-weight: 700;
+
+        margin: 0;
+        text-align: center;
+    }
+
+    form fieldset {
+        /* elimina a borda padrão do fieldset */
+        border: none;
+
+        height: auto;
+    }
+
+    form fieldset {
+        padding-right: 0;
+    }
+
+    .problems-grid ul {
+        /* organiza os elementos em grade */
+        display: grid;
+
+        /* cada linha dessa grade recebe 3 colunas que se ajustam automaticamente */
+        grid-template-columns: 1fr 1fr 1fr;
+
+        /* espaço entre cada coluna e linha */
+        gap: 20px;
+
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .problems-grid ul #responsive {
+        word-wrap: break-word;
+    }
+
+    .problems-grid ul li {
+        background-color: #f0f0f5;
+        border-radius: 10px;
+        text-align: center;
+        padding: 15px 0;
+        height: auto;
+    }
+
+    .problems-grid h3 {
+        font-size: 12pt;
+        height: auto;
+    }
+
+    .problems-grid li img {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .details {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        margin-top: 50px;
+    }
+
+    .details div {
+        max-width: 500px;
+        width: 300px;
+    }
+    
+    .details img {
+        width: 48px;
+        height: 48px;
+        text-align: center;
+    }
+    
+    .details textarea {
+        resize: none;
+        margin: 10px 50px;
+        font-size: 10pt;
+        width: 210px;
+        height: 130px;
+    }
+
+    .details h3 {
+        margin-bottom: 0;
+    }
+
+    button {
+        width: 240px;
+        height: 50px;
+
+        font-size: 20px;
+        background-color: rgb(131, 187, 18);
+        color: white;
+        font-weight: 700;
+
+        border-radius: 10px;
+
+        /* elimina a borda padrão do botão */
+        border: 0;
+
+        /* Suaviza a transição pro evento hover */
+        transition: 300ms;
+    }
+
+    button#first {
+        margin-top: 20px;
+        margin-left: 80px;
+        align-self: center;
+    }
+
+    button#second {
+        margin: 0 50px;
+    }
+
+    footer {
+        margin-top: 50px;
+        height: 550px;
+
+        margin-left: auto;
+        margin-right: auto;
+        /* centraliza horizontalmente */
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: center;
+
+        /* transição das cores de fundo */
+        background: linear-gradient(black, red);
+        padding-left: 0;
+    }
+
+    .map {
+        text-align: center;
+    }
+
+    .map iframe {
+        width: 90vw;
+        height: 400px;
+    }
+}
+
+@media(min-width: 1000px) and (min-height: 500px) {
+    footer {
+        margin-top: 10vh;
+        height: 550px;
+
+        margin-left: auto;
+        margin-right: auto;
+        /* centraliza horizontalmente */
+    }
+
+    footer ul {
+        display: flex;
+        justify-content: center;
+
+        /* transição das cores de fundo */
+        background: linear-gradient(black, red);
+        padding-left: 0;
+    }
+
+    .map {
+        text-align: center;
+    }
+
+    .map iframe {
+        width: 90vw;
+        height: 400px;
+    }
+}
+
+@media(min-height: 900px) {
+    footer {
+        margin-top: 20vh;
+        height: 550px;
+
+        margin-left: auto;
+        margin-right: auto;
+        /* centraliza horizontalmente */
+    }
+}
+
+@media(min-height: 1000px) {
+
+    fieldset {
+        height: auto;
+    }
+
+    header {
+        height: 650px;
+    }
+
+    header hr {
+        height: 500px;
+    }
+
+    footer {
+        margin-top: 40vh;
+        height: 550px;
+
+        margin-left: auto;
+        margin-right: auto;
+        /* centraliza horizontalmente */
+    }
+}
+
+@media(min-height: 1200px) {
+    footer {
+        margin-top: 20vh;
+        height: 550px;
+
+        margin-left: auto;
+        margin-right: auto;
+        /* centraliza horizontalmente */
+    }
+}
+
+    
+

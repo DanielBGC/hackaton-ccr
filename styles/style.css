@@ -138,7 +138,7 @@ form fieldset {
     /* elimina a borda padrão do fieldset */
     border: none;
 
-    height: 100vh;
+    height: auto;
 }
 
 form fieldset.problems {
