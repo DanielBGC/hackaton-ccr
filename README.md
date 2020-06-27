@@ -1,10 +1,6 @@
 <h1 align="center">
    Suporte Caminhoneiro - Hackaton CCR
 </h1>
-
-<p align="center">
- <img src="">
- </p>
     
 <p align="center">
   <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
